@@ -13,7 +13,7 @@ organizzare i singoli membri in card/schede
 Consigli del giorno:
 Ragioniamo come sempre a step.
 Prima la logica in italiano e poi traduciamo in codice
- */
+*/
 
 const team = [
     {
@@ -46,9 +46,26 @@ const team = [
       role: 'Graphic Designer',
       image: 'barbara-ramos-graphic-designer.jpg',
     },
-  ];
+];
 
-  const pathImg = "./assets/img"
+const pathImg = "./assets/img/"
 
-  const htmlCardContainer = document.querySelector(`.row`)
+const htmlCardContainer = document.querySelector(`.row`)
 
+
+for( let i= 0; i < team.length; i++ ){
+
+    htmlCardContainer.innerHTML += `
+    <div class="col-4">
+        <div class="card">
+            <img src="${pathImg}${team[i][`image`]}" class="card-img-top" alt="${team[i][`name`]}">
+            <div class="card-body">
+                <div class="text-center">
+                    <h5 class="card-title">${team[i][`name`]}</h5>
+                    <span class="card-text">${team[i][`role`]}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    `
+}
