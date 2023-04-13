@@ -47,3 +47,8 @@ const team = [
       image: 'barbara-ramos-graphic-designer.jpg',
     },
   ];
+
+  const pathImg = "./assets/img"
+
+  const htmlCardContainer = document.querySelector(`.row`)
+
